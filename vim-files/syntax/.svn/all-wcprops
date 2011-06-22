@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/vim_config/vim_file/syntax
+END
+python_syntax.vim
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/2/trunk/vim_config/vim_file/syntax/python_syntax.vim
+END
+python.vim
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/2/trunk/vim_config/vim_file/syntax/python.vim
+END
+tcl.vim
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/2/trunk/vim_config/vim_file/syntax/tcl.vim
+END

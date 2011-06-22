@@ -1,0 +1,56 @@
+"Key mapping
+map <silent> <C-F2> :if &guioptions =~# 'T' <Bar>
+                                          \set guioptions-=T  <Bar>
+                                           \set guioptions-=m  <Bar>
+				            \set guioptions-=r <Bar>
+                                      \else <Bar>
+                                          \set guioptions+=T  <Bar>
+                                           \set guioptions+=m  <Bar>
+					    \set guioptions+=r <Bar>
+                                       \endif<CR>
+
+
+""Appearence setting
+if has('gui_running')
+colorscheme darkblue
+set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+endif
+
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L] 
+
+set number
+set dictionary+=/usr/share/dict/words
+set scrolloff=5
+set mouse=a
+set encoding=utf-8
+set cursorline
+set cursorcolumn
+
+""Search setting
+set ignorecase
+set incsearch
+
+""Coding setting
+syntax on
+filetype plugin indent on
+
+""Python editor setting
+autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(
+let g:pydoc_highlight=0
+let g:pydoc_cmd="/usr/bin/pydoc"
+let g:pydiction_location='/home/usoluyun/.vim/after/ftplugin/pydiction/complete-dict'
+autocmd BufNewFile *.py 0r ~/.vim/template/simple.py
+
+""Tcl editor setting
+autocmd FileType tcl set complete+=k~/.vim/syntax/tcl.vim isk+=.,(
+autocmd BufNewFile *.tcl 0r ~/.vim/template/simple.tcl
+
+""Plugin setting
+
+""simplenote
+let g:SimplenoteUsername = "usoluyun"
+let g:SimplenotePassword = "ilwlq1983918" 
+
