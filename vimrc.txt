@@ -32,6 +32,7 @@ try
         set background=light
     else
         set background=dark
+        colorscheme oceandeep
     endif
 catch
 endtry
@@ -227,6 +228,8 @@ set mouse=a
 "set cursorline
 ""set cursorcolumn
 
+""git commit
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 ""Python editor setting
 autocmd FileType python set complete+=k~/.vim/syntax/python.vim isk+=.,(

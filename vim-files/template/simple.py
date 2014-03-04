@@ -1,9 +1,7 @@
 #!/usr/bin/python
 #Filename:
 #author: Chester LU <usoluyun@gmail.com>
-
-import sys
-import os
+# -*- coding: utf-8 -*-
 
 
 def main():
