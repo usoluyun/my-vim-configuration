@@ -27,9 +27,9 @@ set ffs=unix,mac,dos
 "color & fonts
 """""""""""""""""""""""""""""""""""""""""""
 try
-    colorscheme hemisu
+    colorscheme oceandeep
     if has('gui_running')
-        set background=light
+        set background=dark
     else
         set background=dark
         colorscheme oceandeep
@@ -345,3 +345,11 @@ endif
 let Tlist_Show_One_File = 1 
 let Tlist_Exit_OnlyWindow = 1
 let Tlist_Use_Right_Window = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vim-coffee-script
+""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd QuickFixCmdPost * nested cwindow | redraw!
+autocmd BufWritePost *.coffee silent make!
+autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+autocmd BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
